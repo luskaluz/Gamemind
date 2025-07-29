@@ -23,7 +23,7 @@ function App() {
 };
 
 const handleImportReflections = (imported) => {
-  setReflections(imported); // ou onImportReflections(imported)
+  setReflections(imported);
 };
   // Atualiza uma reflexão existente pelo id
   const updateReflection = (updatedReflection) => {
@@ -61,12 +61,12 @@ const handleImportReflections = (imported) => {
       {view === 'home' ? (
         <Home
           reflections={reflections}
-          onAddReflection={addReflection}       // ajustado para onAddReflection
-          onUpdateReflection={updateReflection} // passando função de update
+          onAddReflection={addReflection}     
+          onUpdateReflection={updateReflection} 
           onDeleteReflection={deleteReflections}
           onDeleteGame={deleteGame}
           onImportReflections={handleImportReflections}
-           // ajustado para onDeleteReflection
+        
         />
       ) : (
         <Profile reflections={reflections} />
